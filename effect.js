@@ -305,17 +305,30 @@ $('document').ready(function(){
 		$('#end_scene_btn').fadeIn();
 	});
 
-	$(document).on('click', '#end_scene_btn', function(){
+	$(document).on('click', '#end_scene_btn', function () {
 		$(this).fadeOut();
 
 		// Hiện pháo hoa
 		$('#fireworks').fadeIn();
 
-		// Hiện chữ chúc mừng
-
-		// TODO: gọi hàm vẽ pháo hoa của bạn (JS canvas/particles)
+		// Gọi hàm pháo hoa
 		startFireworks();
-		});
+
+		// Sau 7 giây thì dừng pháo hoa và hiện nút nhận quà
+		setTimeout(function () {
+			// Ẩn pháo hoa
+			$('#fireworks').fadeOut();
+
+			// Hiện nút nhận quà
+			$('#gift').fadeIn();
+
+			
+			// Khi bấm nút thì qua trang input.html
+			$('#gift').on('click', function () {
+				window.location.href = 'input.html';
+			});
+		}, 10000); // 7000 ms = 7 giây
+	});
 
 
 
