@@ -315,19 +315,19 @@ $('document').ready(function(){
 		startFireworks();
 
 		// Sau 7 giây thì dừng pháo hoa và hiện nút nhận quà
-		setTimeout(function () {
-			// Ẩn pháo hoa
-			$('#fireworks').fadeOut();
+		// setTimeout(function () {
+		// 	// Ẩn pháo hoa
+		// 	$('#fireworks').fadeOut();
 
-			// Hiện nút nhận quà
-			$('#gift').fadeIn();
+		// 	// Hiện nút nhận quà
+		// 	$('#gift').fadeIn();
 
 			
-			// Khi bấm nút thì qua trang input.html
-			$('#gift').on('click', function () {
-				window.location.href = 'input.html';
-			});
-		}, 10000); // 7000 ms = 7 giây
+		// 	// Khi bấm nút thì qua trang input.html
+		// 	$('#gift').on('click', function () {
+		// 		window.location.href = 'input.html';
+		// 	});
+		// }, 10000); // 7000 ms = 7 giây
 	});
 
 
